@@ -1,0 +1,22 @@
+@import '../../Utils/Parcels/mixins';
+
+.header {
+  @include flexMid(row, space-between, center);
+  margin: 40px;
+
+  .list {
+    gap: 3rem;
+    font-size: 24px;
+    list-style-type: none;
+    @include flexMid(row, left, center);
+    a {
+      text-decoration-line: none;
+      display: inline;
+      color: black;
+    }
+    .underlined {
+      border-bottom: solid;
+      border-bottom-width: 2px;
+    }
+  }
+}
