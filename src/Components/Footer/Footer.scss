@@ -1,0 +1,12 @@
+@import '../../Utils/Parcels/mixins';
+
+footer {
+  @include flexMid(column, flex-end, center);
+
+  color: white;
+  background-color: black;
+  height: 209px;
+  .comment {
+    margin-top: 50px;
+  }
+}

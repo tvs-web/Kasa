@@ -1,0 +1,9 @@
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 50px;
+}/*# sourceMappingURL=Gallery.css.map */

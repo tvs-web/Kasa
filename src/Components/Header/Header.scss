@@ -2,7 +2,7 @@
 
 .header {
   @include flexMid(row, space-between, center);
-  margin: 40px;
+  margin-bottom: 40px;
 
   .list {
     gap: 3rem;
