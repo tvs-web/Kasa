@@ -1,5 +1,6 @@
 #slideWidth {
   min-width: 1240px;
+  filter: brightness(80%) contrast(120%);
 }
 
 .caroussel {
@@ -41,4 +42,10 @@
   border: 1px solid hsl(0, 9%, 62%); /* Couleur de la surbrillance */
   box-shadow: 0 0 5px rgba(40, 39, 39, 0.5019607843);
   box-shadow: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+}
+.caroussel .counter {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  bottom: 10px;
 }/*# sourceMappingURL=Caroussel.css.map */

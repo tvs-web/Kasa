@@ -5,6 +5,7 @@ import Footer from '../../Components/Footer/Footer';
 import Error from '../Error/Error';
 import Data from '../../Utils/data.json';
 import Caroussel from '../../Components/Caroussel/Caroussel';
+import './apartments.scss';
 export default function Apartments() {
   const { id } = useParams();
   const cardsId = Data.find((data) => data.id === id);
@@ -15,6 +16,7 @@ export default function Apartments() {
     <div>
       <Header />
       <Caroussel />
+      {/* <Description /> */}
       <Footer />
     </div>
   );

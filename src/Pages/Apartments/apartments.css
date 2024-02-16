@@ -1,1 +1,6 @@
-/*# sourceMappingURL=apartments.css.map */
+.apartments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=apartments.css.map */
