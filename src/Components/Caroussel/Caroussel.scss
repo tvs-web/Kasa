@@ -1,0 +1,35 @@
+@import '../../Utils/Parcels/mixins';
+
+.caroussel {
+  @include flexMid(row, center, center);
+  width: 1240px;
+  height: 415px;
+  overflow: hidden;
+  position: relative;
+  margin: 50px;
+  border-radius: 25px;
+
+  .slider {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    display: none;
+    .active {
+      display: block;
+    }
+  }
+  .arrowright {
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    z-index: 1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .arrowleft {
+    position: absolute;
+    cursor: pointer;
+    left: 20px;
+    z-index: 1;
+  }
+}

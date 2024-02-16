@@ -4,15 +4,17 @@ import Home from './Pages/Home/Home';
 import Description from './Pages/Description/Description';
 import About from './Pages/About/About';
 import Error from './Pages/Error/Error';
+import Apartments from './Pages/Apartments/Apartments';
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Navigate to="/kasa" />} />
-        <Route path="/Kasa" element={<Home />} />
-        <Route path="/Description" element={<Description />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/kasa" element={<Home />} />
+        <Route path="/description" element={<Description />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/apartments/:id" element={<Apartments />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>

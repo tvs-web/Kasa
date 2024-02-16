@@ -11,11 +11,11 @@ export default function Header() {
       <img src={Logo} alt="kasa" />
       <nav className="nav">
         <ul className="list">
-          <li className={pathname === '/Kasa' ? 'underlined' : ''}>
-            <Link to="/Kasa">Accueil</Link>
+          <li className={pathname === '/kasa' ? 'underlined' : ''}>
+            <Link to="/kasa">Accueil</Link>
           </li>
-          <li className={pathname === '/About' ? 'underlined' : ''}>
-            <Link to="/About">A propos</Link>
+          <li className={pathname === '/about' ? 'underlined' : ''}>
+            <Link to="/about">A propos</Link>
           </li>
         </ul>
       </nav>

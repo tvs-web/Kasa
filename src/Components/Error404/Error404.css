@@ -1,0 +1,23 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ff6060;
+}
+.error .number {
+  font-weight: bold;
+  font-size: 288px;
+  margin: 0;
+  margin-bottom: 50px;
+}
+.error h2 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 100px;
+}
+.error a {
+  margin-bottom: 100px;
+  color: black;
+  font-size: 18px;
+}/*# sourceMappingURL=Error404.css.map */
