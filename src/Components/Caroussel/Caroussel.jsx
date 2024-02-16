@@ -39,10 +39,11 @@ export default function Carousel() {
         console.log('Index:', index, 'Slide Show:', slideShow);
         return (
           <img
+            id="slideWidth"
             key={index}
             src={slides}
             alt={`slides ${index}`}
-            className={index === slideShow ? 'slider.active' : 'slider'}
+            className={index === slideShow ? 'active' : 'slider'}
             onClick={() => setSlideShow(index)}
           />
         );

@@ -1,5 +1,7 @@
 @import '../../Utils/Parcels/mixins';
-
+#slideWidth {
+  min-width: 1240px;
+}
 .caroussel {
   @include flexMid(row, center, center);
   width: 1240px;
@@ -13,9 +15,10 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    object-fit: cover;
     display: none;
-    .active {
+    object-fit: cover;
+
+    &.active {
       display: block;
     }
   }
@@ -24,12 +27,16 @@
     cursor: pointer;
     right: 20px;
     z-index: 1;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px #28272780;
+    box-shadow: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
   }
   .arrowleft {
     position: absolute;
     cursor: pointer;
     left: 20px;
     z-index: 1;
+    border: 1px solid hsl(0, 9%, 62%); /* Couleur de la surbrillance */
+    box-shadow: 0 0 5px #28272780;
+    box-shadow: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
   }
 }
