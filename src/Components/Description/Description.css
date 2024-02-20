@@ -1,1 +1,51 @@
-/*# sourceMappingURL=Description.css.map */
+.descriptionApp {
+  color: #ff6060;
+  font-family: Montserrat;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: self-start;
+  max-width: 1240px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.descriptionApp h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.descriptionApp img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.descriptionApp .loc {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+.descriptionApp .loc p {
+  color: black;
+  font-size: 18px;
+}
+.descriptionApp .host {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+}
+.descriptionApp .host p {
+  margin: 0;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.tagsrate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-right: 50px;
+  margin-left: 50px;
+}/*# sourceMappingURL=Description.css.map */

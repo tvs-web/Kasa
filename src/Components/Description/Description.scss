@@ -1,0 +1,40 @@
+@import '../../Utils/Parcels/mixins';
+
+.descriptionApp {
+  color: #ff6060;
+  font-family: Montserrat;
+  @include flexMid(row, space-between, self-start);
+  max-width: 1240px;
+  margin-right: 50px;
+  margin-left: 50px;
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+  .loc {
+    @include flexMid(column, left, left);
+    p {
+      color: black;
+      font-size: 18px;
+    }
+  }
+  .host {
+    @include flexMid(row, right, center);
+    p {
+      margin: 0;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+  }
+}
+.tagsrate {
+  @include flexMid(row, space-between, center);
+  margin-bottom: 24px;
+  margin-right: 50px;
+  margin-left: 50px;
+}

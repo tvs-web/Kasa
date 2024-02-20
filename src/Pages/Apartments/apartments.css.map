@@ -1,1 +1,1 @@
-{"version":3,"sources":["apartments.scss","../../Utils/Parcels/mixins.scss","apartments.css"],"names":[],"mappings":"AAEA;ECDE,aAAA;EACA,sBDCiB;ECAjB,uBAAA;EACA,mBDDiC;AEEnC","file":"apartments.css"}
+{"version":3,"sources":["apartments.scss","apartments.css"],"names":[],"mappings":"AAAA;EACE,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;ACCF","file":"apartments.css"}

@@ -12,8 +12,9 @@
   height: 415px;
   overflow: hidden;
   position: relative;
-  margin: 50px;
   border-radius: 25px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 .caroussel .slider {
   width: 100%;
