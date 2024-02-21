@@ -1,12 +1,13 @@
 @import '../../Utils/Parcels/mixins';
 #slideWidth {
   min-width: 1240px;
+  margin: 0 auto;
   filter: brightness(80%) contrast(120%);
 }
 
 .caroussel {
   @include flexMid(row, center, center);
-  width: 1240px;
+  max-width: 1240px;
   height: 415px;
   overflow: hidden;
   position: relative;
@@ -23,6 +24,8 @@
 
     &.active {
       display: block;
+    }
+    img {
     }
   }
   .arrowright {

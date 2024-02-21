@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './collapse.scss';
+import './CollapseApartments.scss';
 import { useParams } from 'react-router-dom';
 import Data from '../../Utils/data.json';
 import Arrow from '../../assets/arrow_back_ios-24px 2.png';
@@ -16,6 +16,10 @@ export default function Collapse() {
   const toggleEquipments = () => {
     setEquipmentsShow(!equipmentsShow);
   };
+  console.log(Data);
+  console.log(item);
+  console.log(id);
+
   return (
     <div className="collapse">
       <div className="collapse_global">

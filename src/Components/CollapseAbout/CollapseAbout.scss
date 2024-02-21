@@ -1,0 +1,45 @@
+@import '../../Utils/Parcels/mixins';
+.collapse_about {
+  @include flexMid(column, center, center);
+  margin: auto;
+  color: white;
+  width: 66%;
+  min-width: 335px;
+  .collapse_global_about {
+    @include flexMid(column, center, center);
+    width: 100%;
+    p {
+      color: black;
+      font-size: 18px;
+      margin: 10px;
+    }
+    h3 {
+      font-size: clamp(17px, 2vw, 24px);
+
+      //   padding: 10px 15px;
+      margin: 10px;
+    }
+  }
+  .collapse_button_about {
+    cursor: pointer;
+    @include flexMid(row, space-between, center);
+    width: 100%;
+    background-color: #ff6060;
+    border-radius: 10px;
+    padding: 3px 10px 3px 10px;
+
+    font-family: Montserrat;
+    font-weight: 700;
+    position: static;
+    margin: 10px;
+    &:hover {
+      box-shadow: 0 2px 5px rgb(112, 20, 20);
+    }
+    .collapse_arrow {
+      rotate: 180deg;
+    }
+    .collapse_arrow.rotate {
+      transform: rotateX(180deg);
+    }
+  }
+}

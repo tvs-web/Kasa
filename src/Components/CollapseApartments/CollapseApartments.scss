@@ -1,15 +1,17 @@
 @import '../../Utils/Parcels/mixins';
 .collapse {
   @include flexMid(row, space-between, baseline);
-  margin-right: 50px;
-  margin-left: 50px;
+  max-width: 1240px;
+  margin: auto;
   color: white;
+  gap: 20px;
   .collapse_global {
     margin-bottom: 30px;
     width: 520px;
 
     h3 {
       margin: 0;
+      padding: 3px 10px 3px 10px;
     }
     p,
     ul {
@@ -26,17 +28,20 @@
     .collapse_button {
       cursor: pointer;
       @include flexMid(row, space-between, center);
-      width: 520px;
+      width: auto;
       background-color: #ff6060;
       border-radius: 10px;
       margin: 0;
-      padding: 3px 10px 3px 10px;
       font-family: Montserrat;
       font-size: 18px;
       font-weight: 700;
       position: static;
       &:hover {
         box-shadow: 0 2px 5px rgb(112, 20, 20);
+      }
+      .collapse_arrow {
+        rotate: 180deg;
+        padding: 3px 10px 3px 10px;
       }
       .collapse_arrow.rotate {
         transform: rotateX(180deg);

@@ -2,14 +2,16 @@
 
 .header {
   @include flexMid(row, space-between, center);
-  margin-bottom: 50px;
-  max-width: 1440px;
-
+  max-width: 1240px;
+  margin: auto auto 30px auto;
   .list {
     gap: 3rem;
-    font-size: 24px;
+    font-size: clamp(17px, 4vw, 24px);
     list-style-type: none;
     @include flexMid(row, left, center);
+    // @media screen and (max-width: 425px) {
+    //   font-size: 18px;
+    // }
     a {
       text-decoration-line: none;
       display: inline;

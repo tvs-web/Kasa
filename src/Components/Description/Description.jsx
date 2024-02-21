@@ -4,7 +4,7 @@ import Data from '../../Utils/data.json';
 import Tags from '../Tags/Tags';
 import Rating from '../Rating/Rating';
 import './Description.scss';
-import Collapse from '../Collapse/Collapse';
+import Collapse from '../CollapseApartments/CollapseApartments';
 
 export default function Description() {
   const { id } = useParams();

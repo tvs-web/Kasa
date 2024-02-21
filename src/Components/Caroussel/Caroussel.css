@@ -1,5 +1,6 @@
 #slideWidth {
   min-width: 1240px;
+  margin: 0 auto;
   filter: brightness(80%) contrast(120%);
 }
 
@@ -8,7 +9,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 1240px;
+  max-width: 1240px;
   height: 415px;
   overflow: hidden;
   position: relative;

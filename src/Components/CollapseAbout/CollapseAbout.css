@@ -1,0 +1,50 @@
+.collapse_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: white;
+  width: 66%;
+  min-width: 335px;
+}
+.collapse_about .collapse_global_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.collapse_about .collapse_global_about p {
+  color: black;
+  font-size: 18px;
+  margin: 10px;
+}
+.collapse_about .collapse_global_about h3 {
+  font-size: clamp(17px, 2vw, 24px);
+  margin: 10px;
+}
+.collapse_about .collapse_button_about {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #ff6060;
+  border-radius: 10px;
+  padding: 3px 10px 3px 10px;
+  font-family: Montserrat;
+  font-weight: 700;
+  position: static;
+  margin: 10px;
+}
+.collapse_about .collapse_button_about:hover {
+  box-shadow: 0 2px 5px rgb(112, 20, 20);
+}
+.collapse_about .collapse_button_about .collapse_arrow {
+  rotate: 180deg;
+}
+.collapse_about .collapse_button_about .collapse_arrow.rotate {
+  transform: rotateX(180deg);
+}/*# sourceMappingURL=CollapseAbout.css.map */

@@ -5,4 +5,11 @@
   flex-wrap: wrap;
   gap: 10px;
   padding: 50px;
+  margin: auto;
+  max-width: 1140px;
+
+  @media screen and (max-width: 425px) {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 }

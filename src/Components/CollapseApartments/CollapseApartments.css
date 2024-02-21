@@ -3,9 +3,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  margin-right: 50px;
-  margin-left: 50px;
+  max-width: 1240px;
+  margin: auto;
   color: white;
+  gap: 20px;
 }
 .collapse .collapse_global {
   margin-bottom: 30px;
@@ -13,6 +14,7 @@
 }
 .collapse .collapse_global h3 {
   margin: 0;
+  padding: 3px 10px 3px 10px;
 }
 .collapse .collapse_global p,
 .collapse .collapse_global ul {
@@ -33,11 +35,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 520px;
+  width: auto;
   background-color: #ff6060;
   border-radius: 10px;
   margin: 0;
-  padding: 3px 10px 3px 10px;
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 700;
@@ -46,6 +47,10 @@
 .collapse .collapse_global .collapse_button:hover {
   box-shadow: 0 2px 5px rgb(112, 20, 20);
 }
+.collapse .collapse_global .collapse_button .collapse_arrow {
+  rotate: 180deg;
+  padding: 3px 10px 3px 10px;
+}
 .collapse .collapse_global .collapse_button .collapse_arrow.rotate {
   transform: rotateX(180deg);
-}/*# sourceMappingURL=collapse.css.map */
+}/*# sourceMappingURL=CollapseApartments.css.map */
