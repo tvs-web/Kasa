@@ -1,8 +1,11 @@
 @import '../../Utils/Parcels/mixins';
 #slideWidth {
-  min-width: 1240px;
+  // min-width: 1240px;
   margin: 0 auto;
   filter: brightness(80%) contrast(120%);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .caroussel {
@@ -14,6 +17,9 @@
   border-radius: 25px;
   margin: 0 auto;
   margin-bottom: 30px;
+  @media screen and (max-width: 425px) {
+    height: 255px;
+  }
 
   .slider {
     width: 100%;
@@ -25,25 +31,32 @@
     &.active {
       display: block;
     }
-    img {
+  }
+  .arrow {
+    cursor: pointer;
+    z-index: 1;
+
+    .arrow_right {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      box-shadow: 0 0 5px #28272780;
+      width: auto;
+      @media screen and (max-width: 425px) {
+        width: 10%;
+      }
     }
-  }
-  .arrowright {
-    position: absolute;
-    cursor: pointer;
-    right: 20px;
-    z-index: 1;
-    box-shadow: 0 0 5px #28272780;
-    box-shadow: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
-  }
-  .arrowleft {
-    position: absolute;
-    cursor: pointer;
-    left: 20px;
-    z-index: 1;
-    border: 1px solid hsl(0, 9%, 62%); /* Couleur de la surbrillance */
-    box-shadow: 0 0 5px #28272780;
-    box-shadow: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    .arrow_left {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      box-shadow: 0 0 5px #28272780;
+      @media screen and (max-width: 425px) {
+        width: 10%;
+      }
+    }
   }
   .counter {
     position: absolute;

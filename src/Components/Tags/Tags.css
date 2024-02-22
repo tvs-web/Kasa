@@ -3,7 +3,7 @@
   gap: 10px;
 }
 .tags button {
-  font-size: 14px;
+  font-size: clamp(12px, 1.8vw, 14px);
   font-weight: 700;
   font-family: Montserrat;
   background-color: #ff6060;

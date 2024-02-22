@@ -65,18 +65,21 @@ export default function Carousel() {
       <div className="counter">
         {slideCounter}/{slidesTotal}
       </div>
-      <img
-        className="arrowright"
-        src={ArrowRight}
-        alt="next"
-        onClick={nextSlide}
-      />
-      <img
-        className="arrowleft"
-        src={ArrowLeft}
-        alt="previous"
-        onClick={beforeSlide}
-      />
+      <div className="arrow">
+        <img
+          className="arrow_right"
+          src={ArrowRight}
+          alt="next"
+          onClick={nextSlide}
+        />
+        <img
+          className="arrow_left"
+          src={ArrowLeft}
+          alt="previous"
+          onClick={beforeSlide}
+        />
+      </div>
+
       {slides.map((slides, index) => {
         console.log('Index:', index, 'Slide Show:', slideShow);
         return (

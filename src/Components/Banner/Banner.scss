@@ -16,6 +16,15 @@
     h2 {
       color: White;
       font-size: clamp(24px, 4vw, 48px);
+      text-align: center;
+      // @media screen and (max-width: 320px) {
+      // }
+    }
+    @media screen and (max-width: 768px) {
+      height: 160px;
+    }
+    @media screen and (max-width: 425px) {
+      height: 111px;
     }
   }
 
@@ -35,6 +44,12 @@
       url('../../assets/Image\ source\ 2.png');
     h2 {
       display: none;
+    }
+    @media screen and (max-width: 768px) {
+      height: 160px;
+    }
+    @media screen and (max-width: 425px) {
+      height: 111px;
     }
   }
 }

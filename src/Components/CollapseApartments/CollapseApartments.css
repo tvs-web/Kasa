@@ -8,9 +8,18 @@
   color: white;
   gap: 20px;
 }
+@media screen and (max-width: 425px) {
+  .collapse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: auto;
+  }
+}
 .collapse .collapse_global {
   margin-bottom: 30px;
-  width: 520px;
+  width: 100%;
 }
 .collapse .collapse_global h3 {
   margin: 0;
@@ -19,11 +28,11 @@
 .collapse .collapse_global p,
 .collapse .collapse_global ul {
   color: black;
-  width: 520px;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: clamp(14px, 1.8vw, 18px);
   font-style: normal;
   font-weight: 400;
+  padding-left: 15px;
 }
 .collapse .collapse_global p li,
 .collapse .collapse_global ul li {
@@ -40,7 +49,7 @@
   border-radius: 10px;
   margin: 0;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: clamp(14px, 1.8vw, 18px);
   font-weight: 700;
   position: static;
 }

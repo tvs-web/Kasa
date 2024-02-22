@@ -15,6 +15,12 @@
   justify-content: left;
   align-items: center;
 }
+@media screen and (max-width: 425px) {
+  .header .list {
+    gap: 1rem;
+    padding-left: 0;
+  }
+}
 .header .list a {
   text-decoration-line: none;
   display: inline;
@@ -23,4 +29,9 @@
 .header .list .underlined {
   border-bottom: solid;
   border-bottom-width: 2px;
+}
+@media screen and (max-width: 325px) {
+  .header img {
+    width: 40%;
+  }
 }/*# sourceMappingURL=Header.css.map */

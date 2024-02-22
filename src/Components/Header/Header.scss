@@ -9,9 +9,10 @@
     font-size: clamp(17px, 4vw, 24px);
     list-style-type: none;
     @include flexMid(row, left, center);
-    // @media screen and (max-width: 425px) {
-    //   font-size: 18px;
-    // }
+    @media screen and (max-width: 425px) {
+      gap: 1rem;
+      padding-left: 0;
+    }
     a {
       text-decoration-line: none;
       display: inline;
@@ -20,6 +21,11 @@
     .underlined {
       border-bottom: solid;
       border-bottom-width: 2px;
+    }
+  }
+  @media screen and (max-width: 325px) {
+    img {
+      width: 40%;
     }
   }
 }

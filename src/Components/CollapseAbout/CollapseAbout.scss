@@ -5,12 +5,18 @@
   color: white;
   width: 66%;
   min-width: 335px;
+  @media screen and (max-width: 320px) {
+    min-width: 250px;
+  }
+  @media screen and (max-width: 280px) {
+    min-width: 200px;
+  }
   .collapse_global_about {
     @include flexMid(column, center, center);
     width: 100%;
     p {
       color: black;
-      font-size: 18px;
+      font-size: clamp(14px, 1.8vw, 18px);
       margin: 10px;
     }
     h3 {

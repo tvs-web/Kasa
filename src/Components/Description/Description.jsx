@@ -18,23 +18,24 @@ export default function Description() {
         <div className="loc">
           <h1>{title}</h1>
           <p> {location}</p>
-        </div>
-        <div className="host">
-          <div className="name">
-            <p> {name[0]}</p>
-            <p> {name[1]}</p>
+          <div className="tagsrate">
+            <Tags />
           </div>
-          <img src={hostPicture} alt="Host" />
+        </div>
+        <div className="host_global">
+          <div className="host">
+            <div className="name">
+              <p> {name[0]}</p>
+              <p> {name[1]}</p>
+            </div>
+            <img src={hostPicture} alt="Host" />
+          </div>
+          <div>
+            <Rating />
+          </div>
         </div>
       </div>
-      <div className="tagsrate">
-        <div>
-          <Tags />
-        </div>
-        <div>
-          <Rating />
-        </div>
-      </div>
+
       <div>
         <Collapse />
       </div>

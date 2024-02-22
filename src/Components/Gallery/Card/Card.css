@@ -6,26 +6,43 @@
   align-items: self-end;
   width: 30%;
   height: auto;
-  margin: 10px;
-  background: white;
+  overflow: hidden;
   border-radius: 20px;
-  min-width: 270px;
+  min-width: 200px;
   transition: box-shadow 0.2s ease-in-out;
+  background-color: none;
 }
 @media screen and (max-width: 1024px) {
   .card {
-    width: 40%;
+    width: 48%;
   }
 }
 @media screen and (max-width: 768px) {
   .card {
-    width: 45%;
+    width: 48%;
   }
 }
 @media screen and (max-width: 425px) {
   .card {
     width: 335px;
+    height: 255px;
   }
+}
+@media screen and (max-width: 375px) {
+  .card {
+    width: 260px;
+    height: 211px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .card {
+    height: 160px;
+  }
+}
+.card:hover {
+  transform: scale(0.98);
+  transition-duration: 0.2s;
+  box-shadow: 9px -9px 11px 0px rgba(96, 94, 94, 0.52);
 }
 .card img {
   width: 100%;
@@ -34,11 +51,19 @@
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(80%) contrast(120%);
+  overflow: hidden;
 }
-.card img:hover {
-  transform: scale(1.02);
-  transition-duration: 0.2s;
-  box-shadow: 0px 4px 10px 0px rgba(65, 71, 74, 0.519607843);
+@media screen and (max-width: 425px) {
+  .card img {
+    width: 335px;
+    height: 255px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card img {
+    width: 260px;
+    height: 211px;
+  }
 }
 .card h2 {
   cursor: pointer;

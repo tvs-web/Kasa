@@ -8,6 +8,16 @@
   width: 66%;
   min-width: 335px;
 }
+@media screen and (max-width: 320px) {
+  .collapse_about {
+    min-width: 250px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .collapse_about {
+    min-width: 200px;
+  }
+}
 .collapse_about .collapse_global_about {
   display: flex;
   flex-direction: column;
@@ -17,7 +27,7 @@
 }
 .collapse_about .collapse_global_about p {
   color: black;
-  font-size: 18px;
+  font-size: clamp(14px, 1.8vw, 18px);
   margin: 10px;
 }
 .collapse_about .collapse_global_about h3 {

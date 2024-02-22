@@ -7,14 +7,15 @@
 }
 .error .number {
   font-weight: bold;
-  font-size: 288px;
+  font-size: 30vw;
   margin: 0;
   margin-bottom: 50px;
 }
 .error h2 {
-  font-size: 36px;
+  font-size: clamp(20px, 1.8vw, 36px);
   font-weight: 400;
   margin-bottom: 100px;
+  text-align: center;
 }
 .error a {
   margin-bottom: 100px;

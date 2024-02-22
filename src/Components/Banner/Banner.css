@@ -15,6 +15,17 @@
 .banner .kasa h2 {
   color: White;
   font-size: clamp(24px, 4vw, 48px);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .banner .kasa {
+    height: 160px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .banner .kasa {
+    height: 111px;
+  }
 }
 .banner .about {
   display: flex;
@@ -31,4 +42,14 @@
 }
 .banner .about h2 {
   display: none;
+}
+@media screen and (max-width: 768px) {
+  .banner .about {
+    height: 160px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .banner .about {
+    height: 111px;
+  }
 }/*# sourceMappingURL=Banner.css.map */

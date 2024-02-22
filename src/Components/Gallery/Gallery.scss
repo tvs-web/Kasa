@@ -3,7 +3,7 @@
 .gallery {
   @include flexMid(row, space-around, center);
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   padding: 50px;
   margin: auto;
   max-width: 1140px;
@@ -11,5 +11,6 @@
   @media screen and (max-width: 425px) {
     padding-right: 5px;
     padding-left: 5px;
+    padding: 20px;
   }
 }
