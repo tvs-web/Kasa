@@ -2,11 +2,12 @@ import React from 'react';
 import './Footer.scss';
 import Logow from '../../assets/.LOGOwhite.png';
 
-export default function Footer() {
+export default function Footer(props) {
+  const { footerLogo, footerAlt, footerCopyright } = props;
   return (
     <footer className="footer">
-      <img src={Logow} alt="kasa" />
-      <p className="comment">© 2020 Kasa. All rights reserved</p>
+      <img src={footerLogo} alt={footerAlt} />
+      <p className="comment">{footerCopyright} </p>
     </footer>
   );
 }

@@ -6,6 +6,8 @@ import Error from '../Error/Error';
 import Data from '../../Utils/data.json';
 import Caroussel from '../../Components/Caroussel/Caroussel';
 import Description from '../../Components/Description/Description';
+import Logo from '../../assets/LOGO.png';
+import Logow from '../../assets/.LOGOwhite.png';
 import './apartments.scss';
 
 export default function Apartments() {
@@ -16,10 +18,19 @@ export default function Apartments() {
   }
   return (
     <div className="apartments">
-      <Header />
+      <Header
+        headerLogo={Logo}
+        headerAlt="kasa"
+        headerNav1="Accueil"
+        headerNav2="A propos"
+      />{' '}
       <Caroussel />
       <Description />
-      <Footer />
+      <Footer
+        footerLogo={Logow}
+        footerAlt="kasa"
+        footerCopyright="© 2020 Kasa. All rights reserved"
+      />{' '}
     </div>
   );
 }

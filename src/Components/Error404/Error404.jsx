@@ -1,13 +1,14 @@
 import React from 'react';
 import './Error404.scss';
 
-function Error404() {
+function Error404(props) {
+  const { errorCode, errorMessage, errorRedirect } = props;
   return (
     <div className="error">
-      <h1 className="number">404</h1>
-      <h2>Oups! La page que vous demandez n'existe pas.</h2>
+      <h1 className="number">{errorCode}</h1>
+      <h2> {errorMessage}</h2>
       <a href="/kasa" className="return">
-        Retouner sur la page d'Accueil
+        {errorRedirect}
       </a>
     </div>
   );
