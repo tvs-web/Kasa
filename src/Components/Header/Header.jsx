@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../../assets/LOGO.png';
 import './Header.scss';
 
 export default function Header(props) {

@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.scss';
-import Logow from '../../assets/.LOGOwhite.png';
 
 export default function Footer(props) {
   const { footerLogo, footerAlt, footerCopyright } = props;

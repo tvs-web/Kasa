@@ -1,24 +1,20 @@
 import React, { useState } from 'react';
 import './CollapseApartments.scss';
-import { useParams } from 'react-router-dom';
-import Data from '../../Utils/data.json';
 import Arrow from '../../assets/arrow_back_ios-24px 2.png';
 
-export default function Collapse() {
-  const { id } = useParams();
-  const item = Data.find((item) => item.id === id) || {}; // Trouve l'élément correspondant à l'ID ou utilise un objet vide par défaut
-  const { description, equipments } = item;
-  const [descriptionShow, setDescriptionShow] = useState(false);
-  const [equipmentsShow, setEquipmentsShow] = useState(false);
+export default function CollapseApartments(props) {
+  const { description, equipments } = props;
+
+  const [openDescription, setOpenDescription] = useState(false);
+  const [openEquipments, setOpenEquipments] = useState(false);
+
   const toggleDescription = () => {
-    setDescriptionShow(!descriptionShow);
+    setOpenDescription(!openDescription);
   };
+
   const toggleEquipments = () => {
-    setEquipmentsShow(!equipmentsShow);
+    setOpenEquipments(!openEquipments);
   };
-  console.log(Data);
-  console.log(item);
-  console.log(id);
 
   return (
     <div className="collapse">
@@ -26,26 +22,26 @@ export default function Collapse() {
         <div className="collapse_button" onClick={toggleDescription}>
           <h3>Description</h3>
           <img
-            className={`collapse_arrow ${descriptionShow ? 'rotate' : ''}`}
+            className={`collapse_arrow ${openDescription ? 'rotate' : ''}`}
             src={Arrow}
             alt={'Arrow'}
-          ></img>
+          />
         </div>
-        {descriptionShow && <p>{description}</p>}
+        {openDescription && <p>{description}</p>}
       </div>
       <div className="collapse_global">
         <div className="collapse_button" onClick={toggleEquipments}>
           <h3>Equipements</h3>
           <img
-            className={`collapse_arrow ${equipmentsShow ? 'rotate' : ''}`}
+            className={`collapse_arrow ${openEquipments ? 'rotate' : ''}`}
             src={Arrow}
             alt={'Arrow'}
-          ></img>{' '}
+          />
         </div>
-        {equipmentsShow && (
+        {openEquipments && (
           <ul>
-            {equipments.map((equipement, index) => (
-              <li key={index}>{equipement}</li>
+            {equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
             ))}
           </ul>
         )}
@@ -53,10 +49,55 @@ export default function Collapse() {
     </div>
   );
 }
-// {
-/* <div className="collapse_button">
-        <h3>Equipements</h3>
-        <p>{equipements}</p>
-        <img className="collapse_arrow" src={Arrow} alt={'Arrow'}></img>
-      </div> */
+
+// import React, { useState } from 'react';
+// import './CollapseApartments.scss';
+// import { useParams } from 'react-router-dom';
+// import Data from '../../Utils/data.json';
+// import Arrow from '../../assets/arrow_back_ios-24px 2.png';
+
+// export default function Collapse(props) {
+//   const { collapseId, description, equipments } = props;
+
+//   const [openIds, setOpenIds] = useState({});
+
+//   const toggleText = (id) => {
+//     setOpenIds((prevOpenIds) => ({
+//       ...prevOpenIds,
+//       [id]: !prevOpenIds[id],
+//     }));
+//   };
+//   return (
+//     <div className="collapse">
+//       <div className="collapse_global">
+//         <div className="collapse_button" onClick={() => toggleText(collapseId)}>
+//           <h3>Description</h3>
+
+//           <img
+//             className={`collapse_arrow ${openIds[collapseId] ? 'rotate' : ''}`}
+//             src={Arrow}
+//             alt={'Arrow'}
+//           ></img>
+//         </div>
+//         {openIds[collapseId] && <p>{description}</p>}
+//       </div>
+//       <div className="collapse_global">
+//         <div className="collapse_button" onClick={() => toggleText(collapseId)}>
+//           <h3>Equipements</h3>
+//           <img
+//             className={`collapse_arrow ${openIds[collapseId] ? 'rotate' : ''}`}
+//             src={Arrow}
+//             alt={'Arrow'}
+//           ></img>{' '}
+//         </div>
+//         {openIds[collapseId] && (
+//           <ul>
+//             {equipments.map((equipement, index) => (
+//               <li key={index}>{equipement}</li>
+//             ))}
+//           </ul>
+//         )}
+//       </div>
+//     </div>
+//   );
 // }
