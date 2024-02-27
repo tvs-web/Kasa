@@ -13,10 +13,11 @@ import CollapseApartments from '../../Components/CollapseApartments/CollapseApar
 
 export default function Apartments() {
   const { id } = useParams();
-  const item = Data.find((data) => data.id === id) || {};
+  const item = Data.find((data) => data.id === id);
   if (!item) {
     return <Error />;
   }
+
   return (
     <div className="apartments">
       <Header
@@ -35,9 +36,11 @@ export default function Apartments() {
       />
       <CollapseApartments
         key={id}
-        collapseId={id}
-        description={item.description}
-        equipments={item.equipments}
+        DataId={id}
+        DataTitle1="Description"
+        DataTitle2="Equipements"
+        DataDescription={item.description}
+        DataEquipments={item.equipments}
       />
       <Footer
         footerLogo={Logow}
@@ -47,4 +50,3 @@ export default function Apartments() {
     </div>
   );
 }
-// <Caroussel id={id} />;

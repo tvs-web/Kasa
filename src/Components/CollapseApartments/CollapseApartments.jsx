@@ -3,44 +3,43 @@ import './CollapseApartments.scss';
 import Arrow from '../../assets/arrow_back_ios-24px 2.png';
 
 export default function CollapseApartments(props) {
-  const { description, equipments } = props;
+  const { DataTitle1, DataTitle2, DataDescription, DataEquipments } = props;
+  // Utilisation d'un état local pour chaque section
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
 
-  const [openDescription, setOpenDescription] = useState(false);
-  const [openEquipments, setOpenEquipments] = useState(false);
-
-  const toggleDescription = () => {
-    setOpenDescription(!openDescription);
+  const toggleText1 = () => {
+    setIsOpen1(!isOpen1); // Inversion de l'état pour cette section
   };
-
-  const toggleEquipments = () => {
-    setOpenEquipments(!openEquipments);
+  const toggleText2 = () => {
+    setIsOpen2(!isOpen2); // Inversion de l'état pour cette section
   };
 
   return (
     <div className="collapse">
       <div className="collapse_global">
-        <div className="collapse_button" onClick={toggleDescription}>
-          <h3>Description</h3>
+        <div className="collapse_button" onClick={toggleText1}>
+          <h3>{DataTitle1}</h3>
           <img
-            className={`collapse_arrow ${openDescription ? 'rotate' : ''}`}
+            className={`collapse_arrow ${isOpen1 ? 'rotate' : ''}`}
             src={Arrow}
             alt={'Arrow'}
           />
         </div>
-        {openDescription && <p>{description}</p>}
+        {isOpen1 && <p>{DataDescription}</p>}
       </div>
       <div className="collapse_global">
-        <div className="collapse_button" onClick={toggleEquipments}>
-          <h3>Equipements</h3>
+        <div className="collapse_button" onClick={toggleText2}>
+          <h3>{DataTitle2}</h3>
           <img
-            className={`collapse_arrow ${openEquipments ? 'rotate' : ''}`}
+            className={`collapse_arrow ${isOpen2 ? 'rotate' : ''}`}
             src={Arrow}
             alt={'Arrow'}
           />
         </div>
-        {openEquipments && (
+        {isOpen2 && (
           <ul>
-            {equipments.map((equipment, index) => (
+            {DataEquipments.map((equipment, index) => (
               <li key={index}>{equipment}</li>
             ))}
           </ul>
@@ -49,55 +48,3 @@ export default function CollapseApartments(props) {
     </div>
   );
 }
-
-// import React, { useState } from 'react';
-// import './CollapseApartments.scss';
-// import { useParams } from 'react-router-dom';
-// import Data from '../../Utils/data.json';
-// import Arrow from '../../assets/arrow_back_ios-24px 2.png';
-
-// export default function Collapse(props) {
-//   const { collapseId, description, equipments } = props;
-
-//   const [openIds, setOpenIds] = useState({});
-
-//   const toggleText = (id) => {
-//     setOpenIds((prevOpenIds) => ({
-//       ...prevOpenIds,
-//       [id]: !prevOpenIds[id],
-//     }));
-//   };
-//   return (
-//     <div className="collapse">
-//       <div className="collapse_global">
-//         <div className="collapse_button" onClick={() => toggleText(collapseId)}>
-//           <h3>Description</h3>
-
-//           <img
-//             className={`collapse_arrow ${openIds[collapseId] ? 'rotate' : ''}`}
-//             src={Arrow}
-//             alt={'Arrow'}
-//           ></img>
-//         </div>
-//         {openIds[collapseId] && <p>{description}</p>}
-//       </div>
-//       <div className="collapse_global">
-//         <div className="collapse_button" onClick={() => toggleText(collapseId)}>
-//           <h3>Equipements</h3>
-//           <img
-//             className={`collapse_arrow ${openIds[collapseId] ? 'rotate' : ''}`}
-//             src={Arrow}
-//             alt={'Arrow'}
-//           ></img>{' '}
-//         </div>
-//         {openIds[collapseId] && (
-//           <ul>
-//             {equipments.map((equipement, index) => (
-//               <li key={index}>{equipement}</li>
-//             ))}
-//           </ul>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }

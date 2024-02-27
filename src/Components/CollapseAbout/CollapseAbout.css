@@ -53,7 +53,7 @@
   box-shadow: 0 2px 5px rgb(112, 20, 20);
 }
 .collapse_about .collapse_button_about .collapse_arrow {
-  rotate: 180deg;
+  rotate: 0deg;
 }
 .collapse_about .collapse_button_about .collapse_arrow.rotate {
   transform: rotateX(180deg);
