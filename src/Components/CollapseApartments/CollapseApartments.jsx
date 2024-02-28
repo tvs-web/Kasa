@@ -4,15 +4,14 @@ import Arrow from '../../assets/arrow_back_ios-24px 2.png';
 
 export default function CollapseApartments(props) {
   const { DataTitle1, DataTitle2, DataDescription, DataEquipments } = props;
-  // Utilisation d'un état local pour chaque section
   const [isOpen1, setIsOpen1] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
 
   const toggleText1 = () => {
-    setIsOpen1(!isOpen1); // Inversion de l'état pour cette section
+    setIsOpen1(!isOpen1); 
   };
   const toggleText2 = () => {
-    setIsOpen2(!isOpen2); // Inversion de l'état pour cette section
+    setIsOpen2(!isOpen2); 
   };
 
   return (

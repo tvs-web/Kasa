@@ -35,7 +35,7 @@ export default function Apartments() {
         tags={item.tags}
       />
       <CollapseApartments
-        key={id}
+        // key={id}
         DataId={id}
         DataTitle1="Description"
         DataTitle2="Equipements"

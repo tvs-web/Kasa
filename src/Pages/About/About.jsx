@@ -5,7 +5,7 @@ import Footer from '../../Components/Footer/Footer';
 import CollapsAbout from '../../Components/CollapseAbout/CollapsAbout';
 import Logo from '../../assets/LOGO.png';
 import Logow from '../../assets/.LOGOwhite.png';
-import About1 from '../../Utils/prestation.json';
+import Prest from '../../Utils/prestation.json';
 
 import './About.scss';
 
@@ -19,12 +19,12 @@ export default function About() {
         headerNav2="A propos"
       />{' '}
       <Banner />
-      {About1.map(({ id, text, title }) => (
+      {Prest.map(({ id, text, title }) => (
         <CollapsAbout
           key={id}
-          about1Id={id}
-          about1Title={title}
-          about1Text={text}
+          PrestId={id}
+          prestTitle={title}
+          prestText={text}
         />
       ))}
       <Footer

@@ -14,7 +14,7 @@ export default function Description(props) {
           <h1>{title}</h1>
           <p> {location}</p>
           <div className="tagsrate">
-            <Tags key={id} tags={tags} />
+            <Tags tags={tags} />
           </div>
         </div>
         <div className="host_global">
@@ -26,7 +26,7 @@ export default function Description(props) {
             <img src={hostPicture} alt="Host" />
           </div>
           <div>
-            <Rating key={id} rating={rating} />
+            <Rating rating={rating} />
           </div>
         </div>
       </div>

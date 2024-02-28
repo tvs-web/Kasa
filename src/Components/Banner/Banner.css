@@ -14,8 +14,14 @@
 }
 .banner .kasa h2 {
   color: White;
-  font-size: clamp(24px, 4vw, 48px);
+  font-size: clamp(18px, 4vw, 48px);
   text-align: center;
+}
+@media screen and (max-width: 320px) {
+  .banner .kasa h2 {
+    text-align: left;
+    padding-left: 15px;
+  }
 }
 @media screen and (max-width: 768px) {
   .banner .kasa {
@@ -38,6 +44,7 @@
   background-size: cover;
   background-position: center;
   margin-bottom: 30px;
+  margin: auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/Image source 2.png");
 }
 .banner .about h2 {

@@ -9,9 +9,7 @@ export default function Rating(props) {
   const stars = [];
   for (let i = 0; i < 5; i++) {
     const starClassName = i < rating ? 'red' : 'star';
-    stars.push(
-      <FontAwesomeIcon key={i} icon={faStar} className={starClassName} />
-    );
+    stars.push(<FontAwesomeIcon icon={faStar} className={starClassName} />);
   }
   return <div className="rating">{stars}</div>;
 }

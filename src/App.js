@@ -11,7 +11,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/kasa" />} />
         <Route path="/kasa" element={<Home />} />
-        {/* <Route path="/description" element={<Description />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/apartments/:id" element={<Apartments />} />
         <Route path="*" element={<Error />} />
